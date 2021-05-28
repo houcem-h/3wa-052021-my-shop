@@ -15,11 +15,11 @@
           </thead>
           <tbody>
             <tr>
-              <td>1,001</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
+              <td>Marwa</td>
+              <td>Abdou</td>
+              <td>Oussema</td>
+              <td>Nidhal</td>
+              <td>Hamza</td>
             </tr>
             <tr>
               <td>1,002</td>
