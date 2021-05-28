@@ -17,6 +17,7 @@ Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
 
+
 Route::middleware('auth')->group(function () {
 
     Route::get('/home', 'HomeController@index')->name('home');
