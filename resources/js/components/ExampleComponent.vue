@@ -1,21 +1,41 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ProductsListComponent :products="products"></ProductsListComponent>
     </div>
 </template>
 <script>
+import ProductsListComponent from './ProductsListComponent.vue';
     export default {
+        components: {
+            ProductsListComponent
+        },
         mounted() {
-            console.log('Component mounted.')
+            this.loadAllProducts();
+        },
+        data: function() {
+            return {
+                products: []
+            }
+        },
+        methods: {
+            loadAllProducts: function() {
+                //1st solution : Axios
+                // axios.get('/api/products')
+                // .then(response => {
+                    //     this.products = response.data
+                // })
+                // .catch(error => console.log(error));
+                //2nd solution : Fetch
+                fetch('/api/products')
+                .then(response => {
+                    response.json().then(data => {
+                        data.forEach(element => {
+                            this.products.push(element);
+                        });
+                    })
+                })
+                .catch(error => console.log(error));
+            }
         }
     }
 </script>
