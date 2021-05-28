@@ -7,10 +7,10 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
             </tr>
           </thead>
           <tbody>
